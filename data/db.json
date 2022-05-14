@@ -1,0 +1,13 @@
+{
+    "users":[
+        {"id":1,"name":"ali","username":"ali.ali","api-token":"sdasdaasd","password":"123456"},
+        {"id":2,"name":"ahmed","username":"ahmed.ahmed","api-token":"sdasdaasd","password":"1234567"},
+        {"id":3,"name":"mohamed","username":"mohamed.mohamed","api-token":"sdasdaasd","password":"1234568"}
+    ],
+    "todos":[
+        {"id":1,"title":"todo Title1","description":"dassda1","isDone":false,"createdAt":"26-10-20021"},
+        {"id":2,"title":"todo Title2","description":"dassda2","isDone":false,"createdAt":"26-10-20022"},
+        {"id":3,"title":"todo Title3","description":"dassda3","isDone":false,"createdAt":"26-10-20023"},
+        {"id":4,"title":"todo Title4","description":"dassda4","isDone":false,"createdAt":"26-10-20024"}
+    ]
+}

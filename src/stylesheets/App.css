@@ -1,0 +1,10 @@
+.App{
+  /* display: grid; */
+  min-height: 100vh;
+  background-color: #f7f7f7;
+}
+.outer{
+  display: flex;
+  flex-flow: column;
+  min-height: inherit;
+}

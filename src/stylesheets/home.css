@@ -1,0 +1,341 @@
+.main-content__container{
+    display:flex;
+    flex-grow: 1;
+}
+.navbar{
+    background-color:var(--main-color)!important;
+    padding: 20px 50px;
+    height: fit-content;
+}
+.nav__heading{
+    color:white;
+    margin:0;
+}
+/****************sidenavbar*****************************/
+.side-nav{
+    width: 20%;
+    background-color: white;
+    box-shadow: 8px 3px 18px -15px;
+    padding: 10px 20px;
+}
+.side-nav__profile-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+
+}
+.side-nav__profile-info::before{
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    width: 100%;
+    height: 1px;
+    background-color: #dad7d7;
+}
+.side-nav__image{
+    --size:100px;
+    width: var(--size);
+    height: var(--size);
+    border-radius: 50%;
+    margin: 20px 0;
+}
+
+.side-nav__list{
+    margin-top: 40px;
+}
+.side-nav__item{
+    margin-bottom: 30px;
+}
+.side-nav__link{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color:black;
+}
+.side-nav__link:hover{
+    color:var(--main-color);
+}
+.side-nav__link span{
+    transition: var(--transition-effect);
+}
+.side-nav__link:hover span{
+    transform: translateX(10px);
+}
+.side-nav__svgs{
+    width: 30px;
+    margin-right: 30px;
+    transition: var(--transition-effect);
+
+}
+
+
+/**************todo******************/
+.todos{
+    width: 100%;
+}
+.todos__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px;
+    grid-row-gap: 30px;
+}
+.todos__todo{
+    background-color: white;
+    padding: 20px 15px;
+    border-radius: 8px;
+    margin: auto;
+    border: 1px solid #e9e9de;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.todos__todo-title{
+    margin: 0;
+    text-transform: capitalize;
+    color:#686464;
+
+}
+.todos__todo-time{
+    color:#a19999
+}
+.todos__todo-content{
+    margin: 10px 0;
+    font-family: sans-serif;
+}
+.todos__todo-controls{
+    margin-top: auto ;
+}
+.todos__todo-control{
+    margin-right : 35px;
+    transition: var(--transition-effect)
+}
+.todos__todo-control:hover{
+    color:var(--main-color);
+}
+
+
+/***********add to do************/
+.todo__add-todo{
+    position:fixed;
+    bottom: 40px;
+    right: 40px;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition:var(--transition-effect);
+    border: 0;
+    cursor: pointer;
+    border-radius:50%
+}
+.todo__add-todo svg {
+    width: 30px;
+}
+.todo__add-todo svg path{
+    fill:white
+}
+.todo__add-todo:hover{
+    opacity: .8;
+    transform: rotate(-45deg);
+}
+
+
+/*************add-to-do************************/
+
+.add-to-do{
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    width: 100%;
+    height: 100%; 
+    background-color:white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+}
+
+.navbar-todo{
+    background-color: var(--main-color)!important;
+    padding: 20px 50px;
+    height: -moz-fit-content;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    color:#ebebeb;
+}
+.navbar-todo__heading{
+    margin:0;
+    font-size:26px;
+}
+.navbar-todo__close{
+    background-color: transparent;
+    border: 0;
+    display: flex;
+    cursor:pointer;
+    width: 30px;
+    margin-right: 50px;
+}
+.navbar-todo__Submit{
+    margin-left: auto;
+    background-color: transparent;
+    border: 0;
+    /* width: 30px; */
+    display: flex;
+    cursor:pointer;
+    color:inherit;
+    font-size:26px;
+
+    margin-right: 50px;
+}
+.navbar-todo__close svg{
+    width: 100%;
+}
+.navbar-todo__close svg path{
+    fill:white
+}
+
+
+
+.add-to-do__form{
+    padding:60px;
+    flex-grow: 1;
+}
+.add-to-do-container{
+    margin-bottom: 20px;
+    position: relative;
+}
+.add-to-do__input{
+    height: 50px;
+    width: 100%;
+    border-radius: 5px;
+    border: 2px solid #dbdadd;
+    outline: 0;
+    transition: var(--transition-effect);
+    padding: 0 10px;
+
+}
+.add-to-do__input:focus{
+    border: 2px solid #a5a5a5;
+}
+.add-to-do-container label {
+    position: absolute;
+    left: 7px;
+    top: calc(50% - 10px);
+    transition:  var(--transition-effect);
+    padding: 0 7px;
+    color: #a1a0a5;
+    cursor: text;
+    text-transform: capitalize;
+
+}
+.add-to-do__input:focus ~ label ,.add-to-do__input:not(:placeholder-shown) ~ label{
+    top: -12px;
+    background-color: white;
+    font-size: 14px;
+    color: var(--main-color);
+    font-weight: bold;
+}
+textarea.add-to-do__input{
+    resize: none;
+    height: 200px;
+    padding: 12px 10px;
+}
+textarea.add-to-do__input ~label{
+    top: 10px;
+}
+
+
+
+
+/***************desc modal**********************/
+.description{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    display: grid;
+    place-items: center;
+}
+.description__modal-backdrop{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-color:black;
+    opacity: .3;
+}
+.description__content{
+    background: white;
+    width: 45%;
+    margin: auto;
+    height: 90%;
+    border-radius: 15px;
+    padding: 10px;
+    overflow-y: auto;
+}
+.description__content-header{
+    border-bottom: 1px solid #d2cece;
+    display: flex;
+    align-items: center;
+    padding:10px
+}
+.description__content-heading{
+    margin: 0;
+    text-transform: capitalize;
+    color: #8a8686;
+}
+.description__content-close{
+    width: 30px;
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    margin-right: 20px;
+}
+.description__content-close svg path{
+    fill:#8a8686
+}
+.description__content-desc{
+    overflow-y: auto;
+}
+.description__content-desc-para{
+    line-height: 26px;
+    padding: 20px;
+}
+
+/* width */
+.description__content::-webkit-scrollbar {
+    width: 10px;
+}
+
+  /* Track */
+.description__content::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+  /* Handle */
+.description__content::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 10px;
+}
+
+  /* Handle on hover */
+.description__content::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
