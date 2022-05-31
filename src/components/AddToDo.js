@@ -6,7 +6,8 @@ function AddToDo(props) {
   return (
     <section className='add-to-do'>
       <NavTodo closeTodo={props.toggleTodo} />
-      <AddToDOForm />
+      {/* <NavTodo closeTodo={props.toggleTodo} submitForm={submitForm}/> */}
+      <AddToDOForm closeTodo={props.toggleTodo} />
   </section>
   )
 }

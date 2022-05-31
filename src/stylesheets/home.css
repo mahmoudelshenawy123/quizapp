@@ -161,7 +161,9 @@
     flex-direction: column;
     z-index: 1000;
 }
-
+.add-to-do__form-container{
+    padding:60px;
+}
 .navbar-todo{
     background-color: var(--main-color)!important;
     padding: 20px 50px;
@@ -201,11 +203,8 @@
 .navbar-todo__close svg path{
     fill:white
 }
-
-
-
 .add-to-do__form{
-    padding:60px;
+   
     flex-grow: 1;
 }
 .add-to-do-container{
@@ -338,4 +337,17 @@ textarea.add-to-do__input ~label{
   /* Handle on hover */
 .description__content::-webkit-scrollbar-thumb:hover {
     background: #555;
+}
+.preview-image{
+    width:300px;
+    height:300px;
+    margin:20px
+}
+.upload{
+    border:1px solid black;
+    display:block;
+}
+.upload-container{
+    display:flex;
+    flex-direction:column
 }
